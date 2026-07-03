@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+  --font-mono: var(--font-mono);
+  --color-gold: #c9975a;
+  --color-gold-dark: #a67c45;
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes stamp-in {
+  0% {
+    opacity: 0;
+    transform: rotate(-12deg) scale(1.4);
+  }
+  60% {
+    opacity: 0.9;
+    transform: rotate(-8deg) scale(0.95);
+  }
+  100% {
+    opacity: 0.12;
+    transform: rotate(-8deg) scale(1);
+  }
+}
+
+@keyframes count-up {
+  from {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-reveal {
+  animation: reveal 0.6s ease-out both;
+}
+
+.animate-stamp {
+  animation: stamp-in 0.5s ease-out both;
+}
+
+.animate-count {
+  animation: count-up 0.3s ease-out both;
+}
+
+.timeline-line {
+  background: linear-gradient(to bottom, #c9975a, #d63031, #00b894);
+}
